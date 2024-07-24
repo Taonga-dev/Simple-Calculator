@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calcBody{
+    max-width: 400px;
+    max-height: 650px;
+    background-color: lightblue;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#display{
+    width: 100%;
+    padding: 20px;
+    color: darkblue;
+    border: none;
+    background-color: aliceblue;
+    font-weight: 600;
+    text-align: right;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px
+}
+button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 20px;
+    background-color: aliceblue;
+    color: darkblue;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover{
+    background-color: darkcyan;
+    color: white;
+}
+button:active{
+    background-color: darkslateblue;
+    color: white;
+}
+.delete{
+    background-color: red;
+    color: white;
+}
+.delete:hover{
+    background-color: orangered;
+    color: white;
+}
+.delete:active{
+    background-color: darkred;
+    color: white;
+}
+.equals{
+    background-color: orange;
+    color: white;
+    grid-column: 3/5;
+}
+.equals:hover{
+    background-color: darkorange;
+    color: white;
+}
+.equals:active{
+    background-color: orangered;
+    color: white;
+}
+.opprnd{
+    background-color: darkcyan;
+    color: white;
+}
+.opprnd:hover{
+    background-color: darkslateblue;
+    color: white;
+}
+.opprnd:active{
+    background-color: darkblue;
+    color: white;
+}

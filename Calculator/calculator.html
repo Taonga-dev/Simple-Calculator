@@ -1,0 +1,74 @@
+<!DOCKTYPE html>
+    <html>
+
+    <head>
+        <title> My Calculator</title>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+
+    <body>
+
+        <div class="calcBody">
+            <input type="text" id="display" disabled>
+            <div class="keys">
+                
+                <button onclick="displayInput('1')">1</button>
+                <button onclick="displayInput('2')">2</button>
+                <button onclick="displayInput('3')">3</button>
+                <button class="opprnd" onclick="displayInput('+')">+</button>
+                
+                <button onclick="displayInput('4')">4</button>
+                <button onclick="displayInput('5')">5</button>
+                <button onclick="displayInput('6')">6</button>
+                <button class="opprnd" onclick="displayInput('-')">-</button>
+                
+                <button onclick="displayInput('7')">7</button>
+                <button onclick="displayInput('8')">8</button>
+                <button onclick="displayInput('9')">9</button>
+                <button class="opprnd" onclick="displayInput('*')">*</button>
+                
+                <button onclick="displayInput('0')">0</button>
+                <button onclick="displayInput('(')">(</button>
+                <button onclick="displayInput(')')">)</button>
+                <button class="opprnd" onclick="displayInput('/')">/</button>
+                
+                <button class="clear" onclick="clearData()">C</button>
+                <button class="delete" onclick="deleteChar()">Del</button>
+                <button class="equals" onclick="result()">=</button>
+
+
+
+            </div>
+
+        </div>
+
+
+    </body>
+
+    <script>
+var dsply = document.getElementById("display");
+        function displayInput(value){
+            dsply.value += value;
+        }
+        function clearData(){
+            dsply.value = "";
+        }
+        function deleteChar(){
+            dsply.value = dsply.value.slice(0,-1);
+        }
+        function result(){
+            try{
+                 dsply.value = eval(dsply.value);
+            }
+           catch(error){
+               dsply.value = "Error!";
+           }
+            
+        }
+
+
+    </script>
+
+
+
+    </html>
